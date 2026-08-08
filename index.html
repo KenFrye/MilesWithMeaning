@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Miles With Meaning transforms movement into meaningful impact through running, cycling, racing, and community events.">
+<title>Miles With Meaning | Move • Give • Share</title>
+<style>
+:root{
+  --navy:#0a315d; --navy-dark:#05213f; --orange:#f35a00; --orange-soft:#ff8d32;
+  --cream:#fff9f2; --white:#fff; --text:#18314b; --muted:#627589; --line:#e5ebf1;
+  --shadow:0 18px 48px rgba(5,33,63,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.55}
+img{display:block;max-width:100%}
+a{color:inherit}
+.container{width:min(1140px,calc(100% - 36px));margin:0 auto}
+.topbar{background:var(--navy-dark);color:#fff;text-align:center;padding:10px 16px;font-size:.82rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(10,49,93,.08)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:900}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;box-shadow:0 5px 14px rgba(5,33,63,.15)}
+.navlinks{display:flex;align-items:center;gap:20px}
+.navlinks a{text-decoration:none;font-weight:800;font-size:.93rem}
+.navlinks .donate{background:var(--orange);color:#fff;padding:11px 17px;border-radius:999px}
+.hero{background:radial-gradient(circle at 16% 16%,rgba(243,90,0,.14),transparent 34%),linear-gradient(135deg,var(--cream),#fff 68%)}
+.hero-grid{min-height:700px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:58px 0 72px}
+.kicker{display:inline-block;background:#fff0e6;color:#a83e00;padding:8px 13px;border-radius:999px;font-size:.84rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+h1{margin:20px 0 16px;color:var(--navy-dark);font-size:clamp(3.1rem,6.6vw,5.8rem);line-height:.93;letter-spacing:-.058em}
+h1 span{display:block;color:var(--orange)}
+.hero-copy{font-size:1.16rem;color:var(--muted);max-width:650px;margin:0 0 24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:15px 21px;border-radius:12px;text-decoration:none;font-weight:900;border:2px solid transparent;transition:.2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(243,90,0,.23)}
+.btn-blue{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(10,49,93,.2)}
+.btn-outline{border-color:var(--navy);color:var(--navy);background:#fff}
+.photo-wrap{position:relative;max-width:520px;margin-left:auto}
+.photo-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+.photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%}
+.photo-overlay{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(5,33,63,.88);color:#fff;border-radius:16px;padding:15px 17px;backdrop-filter:blur(8px)}
+.photo-overlay strong{display:block;font-size:1.08rem}
+.photo-overlay span{font-size:.9rem;opacity:.88}
+.badge{position:absolute;right:-16px;top:40px;width:126px;height:126px;object-fit:cover;border-radius:50%;border:7px solid #fff;box-shadow:0 14px 28px rgba(5,33,63,.22)}
+section{padding:86px 0}
+.section-head{max-width:780px;margin:0 auto 40px;text-align:center}
+.section-head h2{margin:0 0 12px;color:var(--navy-dark);font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.04em}
+.section-head p{margin:0;color:var(--muted);font-size:1.08rem}
+.impact{background:#f7f9fc}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;text-align:center;box-shadow:0 12px 30px rgba(5,33,63,.07)}
+.stat strong{display:block;color:var(--orange);font-size:2.35rem;line-height:1.05;margin-bottom:8px}
+.stat span{color:var(--navy-dark);font-weight:900}
+.stat p{margin:8px 0 0;color:var(--muted);font-size:.94rem}
+.campaign-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}
+.campaign-card,.donate-panel{border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow);background:#fff}
+.campaign-card{background:var(--navy-dark);color:#fff}
+.campaign-card .eyebrow{font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;font-weight:900;opacity:.7}
+.campaign-card h3{font-size:2.2rem;margin:10px 0 8px}
+.campaign-card p{opacity:.82}
+.progress-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin:28px 0 14px}
+.progress-head strong{font-size:2rem}
+.progress-bar{height:16px;background:rgba(255,255,255,.16);border-radius:999px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--orange),#ffb23c);border-radius:999px;width:15%}
+.progress-percent{margin-top:11px;font-size:.92rem;opacity:.78}
+.donate-panel h3{margin:0 0 10px;color:var(--navy-dark);font-size:1.65rem}
+.donate-panel p{color:var(--muted)}
+.causes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.cause{border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
+.cause .icon{font-size:1.7rem;margin-bottom:8px}
+.cause strong{font-size:1.05rem;color:var(--navy-dark)}
+.cause p{font-size:.92rem;flex:1}
+.amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.amount{background:#f7f9fc;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.amount strong{display:block;color:var(--navy-dark)}
+.amount span{font-size:.82rem;color:var(--muted)}
+.events{background:#f7f9fc}
+.event-card{max-width:840px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
+.event-icon{width:68px;height:68px;border-radius:18px;background:#fff0e6;display:grid;place-items:center;font-size:2rem}
+.event-card h3{margin:0 0 6px;color:var(--navy-dark);font-size:1.55rem}
+.event-card p{margin:0;color:var(--muted)}
+.follow-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.social-card{border-radius:22px;padding:30px;color:#fff;text-decoration:none;box-shadow:var(--shadow);min-height:190px;display:flex;flex-direction:column;justify-content:flex-end}
+.social-card strong{font-size:1.5rem}
+.social-card span{opacity:.83}
+.facebook{background:linear-gradient(135deg,#173f73,#0a315d)}
+.instagram{background:linear-gradient(135deg,#f35a00,#8b2a74)}
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+.story-logo{background:#fff;border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+.story-copy h2{margin:0 0 18px;color:var(--navy-dark);font-size:clamp(2rem,4vw,3.15rem);line-height:1.03;letter-spacing:-.04em}
+.story-copy p{color:var(--muted);font-size:1.07rem}
+.values{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.values span{background:#eef3f8;color:var(--navy);padding:9px 13px;border-radius:999px;font-weight:900}
+.closer{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:#fff;text-align:center}
+.closer h2{margin:0 0 10px;font-size:clamp(2rem,4vw,3.1rem)}
+.closer p{margin:0 auto 18px;max-width:720px;opacity:.84}
+.closer .motto{font-size:1.12rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
+footer{background:#021529;color:#fff;padding:30px 0}
+.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.footer a{opacity:.82;text-decoration:none;margin-left:14px}
+
+.highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.highlight-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(5,33,63,.08);text-decoration:none}
+.highlight-media{aspect-ratio:16/10;background:linear-gradient(135deg,#eef3f8,#fff0e6);overflow:hidden;display:grid;place-items:center}
+.highlight-media img,.highlight-media video{width:100%;height:100%;object-fit:cover}
+.highlight-media .highlight-icon{font-size:3.4rem}
+.highlight-body{padding:20px}
+.highlight-meta{font-size:.78rem;color:var(--orange);font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.highlight-body h3{margin:7px 0 7px;color:var(--navy-dark);font-size:1.2rem}
+.highlight-body p{margin:0;color:var(--muted);font-size:.93rem}
+.highlight-link{display:inline-block;margin-top:13px;color:var(--navy);font-weight:900;font-size:.88rem}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.partner-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center;box-shadow:0 10px 24px rgba(5,33,63,.06)}
+.partner-card strong{display:block;color:var(--navy-dark);font-size:1.05rem}
+.partner-card span{display:block;color:var(--muted);font-size:.86rem;margin-top:6px}
+
+@media(max-width:900px){
+  .navlinks a:not(.donate){display:none}
+  .hero-grid,.campaign-grid,.story-grid{grid-template-columns:1fr}
+  .photo-wrap{margin:0 auto}
+  .stats{grid-template-columns:1fr}
+  .highlight-grid{grid-template-columns:1fr}
+  .partner-grid{grid-template-columns:repeat(2,1fr)}
+  .event-card{grid-template-columns:auto 1fr}
+  .event-card .btn{grid-column:1/-1}
+}
+@media(max-width:620px){
+  .container{width:min(100% - 24px,1140px)}
+  .brand span{display:none}
+  h1{font-size:3.35rem}
+  .hero-actions{flex-direction:column}
+  .btn{width:100%}
+  .causes,.amounts,.follow-grid,.partner-grid{grid-template-columns:1fr}
+  .progress-head{flex-direction:column;align-items:flex-start;gap:4px}
+  section{padding:66px 0}
+  .badge{width:98px;height:98px;right:-6px;top:28px;border-width:5px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">Move • Give • Share • Every Mile Matters</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="assets/mwm-round.jpg" alt="Miles With Meaning logo">
+      <span>MILES WITH MEANING</span>
+    </a>
+    <nav class="navlinks">
+      <a href="#home">Home</a>
+      <a href="#campaign">Current Campaigns</a>
+      <a href="highlights.html">Highlights</a>
+      <a href="#partners">Partners</a>
+      <a href="#about">About</a>
+      <a class="donate" href="#donate">Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker">Running • Cycling • Racing • Community</span>
+        <h1>Turning movement into <span>meaningful impact.</span></h1>
+        <p class="hero-copy">
+          Miles With Meaning transforms movement—running, cycling, racing, and community events—into support
+          for organizations making a difference for people, animals, and communities in need.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-orange" href="#campaign">See the Current Campaign</a>
+          <a class="btn btn-outline" href="#impact">See Our Impact</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-card">
+          <img src="assets/ken-running.jpg" alt="Ken Frye running">
+          <div class="photo-overlay">
+            <strong>Ken Frye</strong>
+            <span>Running with purpose—one mile at a time.</span>
+          </div>
+        </div>
+        <img class="badge" src="assets/mwm-round.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our impact so far</h2>
+        <p>Miles With Meaning is an ongoing mission—not a single race or one-time fundraiser.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <strong id="lifetime-raised">$12,000+</strong>
+          <span>Raised Since Launch</span>
+          <p>Support generated through races, rides, and community fundraising.</p>
+        </div>
+        <div class="stat">
+          <strong>Movement</strong>
+          <span>With a Purpose</span>
+          <p>Running, cycling, racing, and other challenges become opportunities to give.</p>
+        </div>
+        <div class="stat">
+          <strong>Community</strong>
+          <span>Powered Impact</span>
+          <p>Friends, donors, restaurants, and local partners help move the mission forward.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="campaign">
+    <div class="container">
+      <div class="section-head">
+        <h2>Current campaigns</h2>
+        <p>The latest Miles With Meaning effort—and the next opportunity to make an impact.</p>
+      </div>
+
+      <div class="campaign-grid">
+        <div class="campaign-card">
+          <div class="eyebrow">Featured Campaign</div>
+          <h3 id="campaign-name">2026 Helsinki Marathon</h3>
+          <p id="campaign-date">August 22, 2026</p>
+          <p>I’m raising $5,000 for the APA of Missouri and the Michael J. Fox Foundation.</p>
+
+          <div class="progress-head">
+            <div><span>Raised</span><br><strong id="raised-display">$750</strong></div>
+            <div><span>Goal</span><br><strong id="goal-display">$5,000</strong></div>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="progress-percent" id="progress-percent">15% of the goal reached.</div>
+        </div>
+
+        <div class="donate-panel" id="donate">
+          <h3>Choose a cause</h3>
+          <p>Donate to the organization that speaks to your heart—or support both.</p>
+          <div class="causes">
+            <div class="cause">
+              <div class="icon">🐾</div>
+              <strong>APA of Missouri</strong>
+              <p>Helping provide shelter, medical care, food, enrichment, and loving homes for animals in need.</p>
+              <a class="btn btn-orange" id="apa-link" target="_blank" rel="noopener">Support the APA</a>
+            </div>
+            <div class="cause">
+              <div class="icon">🦊</div>
+              <strong>Michael J. Fox Foundation</strong>
+              <p>Supporting research aimed at better treatments and a cure for Parkinson’s disease through Team Fox.</p>
+              <a class="btn btn-blue" id="fox-link" target="_blank" rel="noopener">Support Team Fox</a>
+            </div>
+          </div>
+          <div class="amounts">
+            <div class="amount"><strong>$26.20</strong><span>$1 per marathon mile</span></div>
+            <div class="amount"><strong>$50</strong><span>Meaningful support</span></div>
+            <div class="amount"><strong>$100</strong><span>A larger impact</span></div>
+            <div class="amount"><strong>Any Amount</strong><span>Every gift matters</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events" id="coming-up">
+    <div class="container">
+      <div class="section-head">
+        <h2>Coming up</h2>
+        <p>The next Miles With Meaning campaign is already taking shape.</p>
+      </div>
+      <div class="event-card">
+        <div class="event-icon">🍽️</div>
+        <div>
+          <span class="kicker" style="margin-bottom:10px">Next Campaign</span>
+          <h3 id="event-title">Brunch With Meaning</h3>
+          <p id="event-details">Date, restaurant, and beneficiary details coming soon.</p>
+        </div>
+        <a class="btn btn-outline" href="#follow">Follow for Updates</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="highlights">
+    <div class="container">
+      <div class="section-head">
+        <h2>Highlights</h2>
+        <p>Runs, rides, fundraisers, volunteering, and the moments that turn movement into impact.</p>
+      </div>
+      <div class="highlight-grid" id="highlight-preview"></div>
+      <div style="text-align:center;margin-top:28px">
+        <a class="btn btn-outline" href="highlights.html">View All Highlights</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact" id="partners">
+    <div class="container">
+      <div class="section-head">
+        <h2>Partners & causes</h2>
+        <p>Miles With Meaning grows through charities, local businesses, and community partners who believe movement can create impact.</p>
+      </div>
+      <div class="partner-grid">
+        <div class="partner-card"><strong>APA of Missouri</strong><span>Current beneficiary</span></div>
+        <div class="partner-card"><strong>Michael J. Fox Foundation</strong><span>Current beneficiary • Team Fox</span></div>
+        <div class="partner-card"><strong>Big Shark Bicycle Co.</strong><span>Community partner</span></div>
+        <div class="partner-card"><strong>Running Niche</strong><span>Community partner</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="follow">
+    <div class="container">
+      <div class="section-head">
+        <h2>Follow Miles With Meaning</h2>
+        <p>Training updates, fundraising milestones, campaign announcements, photos, videos, and stories of impact.</p>
+      </div>
+      <div class="follow-grid">
+        <a class="social-card facebook" id="facebook-link" target="_blank" rel="noopener">
+          <strong>Follow on Facebook</strong>
+          <span>Miles With Meaning updates and community events</span>
+        </a>
+        <a class="social-card instagram" id="instagram-link" target="_blank" rel="noopener">
+          <strong>Follow on Instagram</strong>
+          <span>@mileswithmeaning_stl</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container story-grid">
+      <div class="story-logo"><img src="assets/mwm-logo.jpg" alt="Miles With Meaning"></div>
+      <div class="story-copy">
+        <h2>I move my body to move the needle.</h2>
+        <p>
+          Miles With Meaning began with a simple belief: movement can become an opportunity to help someone else.
+          Every run, ride, race, and community event can raise awareness, create connection, and generate support
+          for causes that matter.
+        </p>
+        <p>
+          Whether you donate, attend an event, share the mission, or simply cheer from afar, you are helping turn
+          effort into impact.
+        </p>
+        <div class="values"><span>MOVE</span><span>GIVE</span><span>SHARE</span><span>IMPACT</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closer">
+    <div class="container">
+      <h2>Every mile matters.</h2>
+      <p>Thank you for helping turn movement into meaningful impact.</p>
+      <div class="motto">Move • Give • Share</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <strong>MILES WITH MEANING</strong>
+    <div>
+      <a id="footer-facebook" target="_blank" rel="noopener">Facebook</a>
+      <a id="footer-instagram" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<script src="site-config.js"></script>
+<script>
+(function(){
+  const c = window.MWM_CONFIG || {};
+  const money = n => new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n);
+  const raised = Number(c.currentRaised || 0);
+  const goal = Number(c.currentGoal || 1);
+  const pct = Math.max(0, Math.min(100, (raised/goal)*100));
+
+  document.getElementById('lifetime-raised').textContent = c.lifetimeRaisedText || '$12,000+';
+  document.getElementById('raised-display').textContent = money(raised);
+  document.getElementById('goal-display').textContent = money(goal);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-percent').textContent = Math.round(pct) + '% of the goal reached.';
+  document.getElementById('campaign-name').textContent = c.currentCampaign || '';
+  document.getElementById('campaign-date').textContent = c.campaignDate || '';
+  document.getElementById('event-title').textContent = c.upcomingEventTitle || '';
+  document.getElementById('event-details').textContent = c.upcomingEventDetails || '';
+
+  ['facebook-link','footer-facebook'].forEach(id => document.getElementById(id).href = c.facebookUrl || '#');
+  ['instagram-link','footer-instagram'].forEach(id => document.getElementById(id).href = c.instagramUrl || '#');
+  document.getElementById('apa-link').href = c.apaDonateUrl || '#';
+  document.getElementById('fox-link').href = c.foxDonateUrl || '#';
+
+  const preview = document.getElementById('highlight-preview');
+  (c.highlights || []).slice(0,3).forEach(item => {
+    const card = document.createElement('a');
+    card.className = 'highlight-card';
+    card.href = 'highlights.html#' + (item.slug || '');
+    let media = '<div class="highlight-icon">' + (item.icon || '✨') + '</div>';
+    if(item.mediaType === 'image' && item.media){
+      media = '<img src="' + item.media + '" alt="">';
+    } else if(item.mediaType === 'video' && item.media){
+      media = '<video src="' + item.media + '" muted playsinline></video>';
+    }
+    card.innerHTML = '<div class="highlight-media">' + media + '</div>' +
+      '<div class="highlight-body"><div class="highlight-meta">' + (item.category || 'Highlight') + ' • ' + (item.date || '') + '</div>' +
+      '<h3>' + (item.title || '') + '</h3><p>' + (item.summary || '') + '</p><span class="highlight-link">Read the Story →</span></div>';
+    preview.appendChild(card);
+  });
+})();
+</script>
+</body>
+</html>
