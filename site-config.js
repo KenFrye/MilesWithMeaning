@@ -58,10 +58,15 @@ partners: [
     type: "Community partner",
     url: "https://www.bigshark.com"
   },
-  {
-    name: "Running Niche",
-    type: "Community partner",
-    url: "https://runningniche.com"
-  }
+ {
+      name: "Running Niche",
+      type: "Community partner",
+      url: "https://runningniche.com"
+    },
+    {
+      name: "United Way of Greater St. Louis",
+      type: "Past beneficiary",
+      url: "https://helpingpeople.org"
+    }
 ]
 };
