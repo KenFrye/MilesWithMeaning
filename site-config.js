@@ -41,5 +41,27 @@ window.MWM_CONFIG = {
       media: "assets/mwm-logo.jpg",
       icon: "❤️"
     }
-  ]
+ ],
+partners: [
+  {
+    name: "APA of Missouri",
+    type: "Current beneficiary",
+    url: "https://apamo.org"
+  },
+  {
+    name: "Michael J. Fox Foundation",
+    type: "Current beneficiary • Team Fox",
+    url: "https://www.michaeljfox.org"
+  },
+  {
+    name: "Big Shark Bicycle Co.",
+    type: "Community partner",
+    url: "https://www.bigshark.com"
+  },
+  {
+    name: "Running Niche",
+    type: "Community partner",
+    url: "https://runningniche.com"
+  }
+]
 };
