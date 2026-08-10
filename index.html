@@ -300,17 +300,12 @@ footer{background:#021529;color:#fff;padding:30px 0}
         <h2>Partners & causes</h2>
         <p>Miles With Meaning grows through charities, local businesses, and community partners who believe movement can create impact.</p>
       </div>
-      <div class="partner-grid">
-        <div class="partner-card"><strong>APA of Missouri</strong><span>Current beneficiary</span></div>
-        <div class="partner-card"><strong>Michael J. Fox Foundation</strong><span>Current beneficiary • Team Fox</span></div>
-        <div class="partner-card"><strong>Big Shark Bicycle Co.</strong><span>Community partner</span></div>
-        <div class="partner-card"><strong>Running Niche</strong><span>Community partner</span></div>
-      </div>
+    <div class="partner-grid" id="partner-grid"></div>  
     </div>
   </section>
 
   <section id="follow">
-    <div class="container">
+  
       <div class="section-head">
         <h2>Follow Miles With Meaning</h2>
         <p>Training updates, fundraising milestones, campaign announcements, photos, videos, and stories of impact.</p>
@@ -406,6 +401,21 @@ footer{background:#021529;color:#fff;padding:30px 0}
       '<h3>' + (item.title || '') + '</h3><p>' + (item.summary || '') + '</p><span class="highlight-link">Read the Story →</span></div>';
     preview.appendChild(card);
   });
+ const partnerGrid = document.getElementById("partner-grid");
+
+(c.partners || []).forEach(partner => {
+  const card = document.createElement("a");
+  card.className = "partner-card";
+  card.href = partner.url || "#";
+  card.target = "_blank";
+  card.rel = "noopener";
+
+  card.innerHTML =
+    "<strong>" + (partner.name || "") + "</strong>" +
+    "<span>" + (partner.type || "") + "</span>";
+
+  partnerGrid.appendChild(card);
+}); 
 })();
 </script>
 </body>
