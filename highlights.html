@@ -3,29 +3,586 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Highlights from Miles With Meaning: running, cycling, fundraising, volunteering, and community impact.">
+<meta name="description" content="Highlights from Miles With Meaning: running, cycling, fundraising, volunteering and community impact.">
 <title>Highlights | Miles With Meaning</title>
+
 <style>
-:root{--navy:#0a315d;--navy-dark:#05213f;--orange:#f35a00;--cream:#fff9f2;--text:#18314b;--muted:#627589;--line:#e5ebf1;--shadow:0 18px 48px rgba(5,33,63,.14)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.55}img{display:block;max-width:100%}a{color:inherit}.container{width:min(1140px,calc(100% - 36px));margin:0 auto}.topbar{background:var(--navy-dark);color:#fff;text-align:center;padding:10px 16px;font-size:.82rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(10,49,93,.08)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:900}.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover}.navlinks{display:flex;align-items:center;gap:20px}.navlinks a{text-decoration:none;font-weight:800;font-size:.93rem}.navlinks .donate{background:var(--orange);color:#fff;padding:11px 17px;border-radius:999px}.page-hero{padding:92px 0 70px;background:radial-gradient(circle at 16% 16%,rgba(243,90,0,.14),transparent 34%),linear-gradient(135deg,var(--cream),#fff 68%)}.kicker{display:inline-block;background:#fff0e6;color:#a83e00;padding:8px 13px;border-radius:999px;font-size:.84rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}.page-hero h1{margin:18px 0 12px;color:var(--navy-dark);font-size:clamp(3rem,6vw,5.2rem);line-height:.95;letter-spacing:-.055em}.page-hero p{font-size:1.14rem;color:var(--muted);max-width:720px;margin:0}.filters{padding:28px 0;border-bottom:1px solid var(--line)}.filter-row{display:flex;gap:10px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;color:var(--navy);padding:9px 13px;border-radius:999px;font-weight:900;cursor:pointer}.filter.active{background:var(--navy);color:#fff}.highlights{padding:64px 0 92px}.highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.highlight-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 12px 30px rgba(5,33,63,.08)}.highlight-media{aspect-ratio:16/10;background:linear-gradient(135deg,#eef3f8,#fff0e6);display:grid;place-items:center;overflow:hidden}.highlight-media img,.highlight-media video{width:100%;height:100%;object-fit:cover}.highlight-icon{font-size:4rem}.highlight-body{padding:22px}.highlight-meta{font-size:.78rem;color:var(--orange);font-weight:900;text-transform:uppercase;letter-spacing:.06em}.highlight-body h2{margin:8px 0 8px;color:var(--navy-dark);font-size:1.35rem}.highlight-body p{margin:0;color:var(--muted)}.story{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:.92rem;color:var(--text)}footer{background:#021529;color:#fff;padding:30px 0}.footer{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer a{opacity:.82;text-decoration:none;margin-left:14px}@media(max-width:900px){.navlinks a:not(.donate){display:none}.highlight-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:min(100% - 24px,1140px)}.brand span{display:none}.highlight-grid{grid-template-columns:1fr}.page-hero h1{font-size:3.2rem}}
+:root{
+  --navy:#0a315d;
+  --navy-dark:#05213f;
+  --orange:#f35a00;
+  --cream:#fff9f2;
+  --text:#183146;
+  --muted:#69798c;
+  --line:#e4e9ef;
+  --white:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#f7f9fc;
+  line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+
+img{display:block;max-width:100%}
+
+.container{
+  width:min(1120px,calc(100% - 36px));
+  margin:auto;
+}
+
+.topbar{
+  background:var(--navy-dark);
+  color:white;
+  text-align:center;
+  padding:8px 15px;
+  font-weight:700;
+  font-size:.82rem;
+  letter-spacing:.06em;
+}
+
+header{
+  background:white;
+  border-bottom:1px solid var(--line);
+}
+
+nav{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand img{
+  width:84px;
+  height:84px;
+  object-fit:contain;
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  font-weight:700;
+  color:var(--navy);
+}
+
+.donate{
+  background:var(--orange);
+  color:white;
+  padding:13px 22px;
+  border-radius:999px;
+}
+
+.page-hero{
+  padding:70px 0 48px;
+  background:linear-gradient(135deg,#fff,#fff5ed);
+}
+
+.kicker{
+  color:var(--orange);
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:.08em;
+  font-size:.82rem;
+}
+
+h1{
+  margin:10px 0 12px;
+  color:var(--navy);
+  font-size:clamp(2.5rem,6vw,4.6rem);
+  line-height:1;
+}
+
+.page-hero p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:1.08rem;
+}
+
+.filters{
+  background:white;
+  border-bottom:1px solid var(--line);
+}
+
+.filter-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  padding:20px 0;
+}
+
+.filter{
+  border:1px solid var(--line);
+  background:white;
+  color:var(--navy);
+  border-radius:999px;
+  padding:9px 15px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.filter.active{
+  background:var(--navy);
+  color:white;
+}
+
+.highlights{
+  padding:50px 0 80px;
+}
+
+.highlight-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.highlight-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 32px rgba(10,49,93,.08);
+  cursor:pointer;
+}
+
+.highlight-media{
+  height:240px;
+  background:linear-gradient(135deg,#f2f5f8,#fff2e8);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+
+.highlight-media img,
+.highlight-media video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.highlight-icon{
+  font-size:4rem;
+}
+
+.highlight-body{
+  padding:24px;
+}
+
+.highlight-meta{
+  color:var(--orange);
+  text-transform:uppercase;
+  font-size:.76rem;
+  letter-spacing:.07em;
+  font-weight:800;
+}
+
+.highlight-body h3{
+  margin:8px 0 10px;
+  color:var(--navy);
+  font-size:1.45rem;
+}
+
+.highlight-body p{
+  color:var(--muted);
+  margin:0 0 14px;
+}
+
+.highlight-link{
+  color:var(--navy);
+  font-weight:800;
+}
+
+/* FULL STORY */
+
+.story-view{
+  display:none;
+  padding:48px 0 90px;
+}
+
+.story-back{
+  display:inline-block;
+  margin-bottom:26px;
+  color:var(--navy);
+  font-weight:800;
+}
+
+.story-shell{
+  max-width:860px;
+  margin:auto;
+}
+
+.story-hero{
+  background:white;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:0 12px 34px rgba(10,49,93,.09);
+}
+
+.story-hero-media{
+  max-height:520px;
+  overflow:hidden;
+}
+
+.story-hero-media img,
+.story-hero-media video{
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+}
+
+.story-header{
+  padding:32px;
+}
+
+.story-meta{
+  color:var(--orange);
+  font-size:.8rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.story-header h1{
+  font-size:clamp(2.3rem,6vw,4rem);
+  margin:10px 0 15px;
+}
+
+.story-summary{
+  color:var(--muted);
+  font-size:1.15rem;
+}
+
+.story-content{
+  background:white;
+  margin-top:24px;
+  padding:34px;
+  border-radius:24px;
+  border:1px solid var(--line);
+}
+
+.story-content h2{
+  color:var(--navy);
+  margin-top:32px;
+}
+
+.story-content h2:first-child{
+  margin-top:0;
+}
+
+.story-content p{
+  font-size:1.08rem;
+  color:#435468;
+}
+
+.story-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:25px;
+}
+
+.story-gallery img{
+  width:100%;
+  border-radius:16px;
+}
+
+.story-cta{
+  margin-top:28px;
+  padding:28px;
+  border-radius:20px;
+  background:var(--cream);
+  text-align:center;
+}
+
+.story-cta h3{
+  color:var(--navy);
+  margin-top:0;
+}
+
+.story-cta a{
+  display:inline-block;
+  margin:6px;
+  background:var(--orange);
+  color:white;
+  padding:13px 20px;
+  border-radius:999px;
+  font-weight:800;
+}
+
+footer{
+  background:var(--navy-dark);
+  color:white;
+  padding:32px 0;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+@media(max-width:850px){
+  .highlight-grid{grid-template-columns:1fr 1fr}
+  .nav-links a:not(.donate){display:none}
+}
+
+@media(max-width:620px){
+  .highlight-grid{grid-template-columns:1fr}
+  .story-content,.story-header{padding:24px}
+  .story-gallery{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
+
 <div class="topbar">Move • Give • Share • Every Mile Matters</div>
-<header><div class="container nav"><a class="brand" href="index.html"><img src="assets/mwm-round.jpg" alt="Miles With Meaning logo"><span>MILES WITH MEANING</span></a><nav class="navlinks"><a href="index.html">Home</a><a href="index.html#campaign">Current Campaigns</a><a href="highlights.html">Highlights</a><a href="index.html#partners">Partners</a><a href="index.html#about">About</a><a class="donate" href="index.html#donate">Donate</a></nav></div></header>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html">
+        <img src="assets/mwm-round.jpg" alt="Miles With Meaning">
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#campaigns">Current Campaigns</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="index.html#partners">Partners</a>
+        <a class="donate" href="index.html#donate">Donate</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="page-hero"><div class="container"><span class="kicker">Highlights</span><h1>The moments behind the miles.</h1><p>Runs, rides, fundraisers, volunteering, community events, photos, videos, and the stories that make Miles With Meaning more than a finish line.</p></div></section>
-<section class="filters"><div class="container"><div class="filter-row" id="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Running">Running</button><button class="filter" data-filter="Cycling">Cycling</button><button class="filter" data-filter="Fundraiser">Fundraisers</button><button class="filter" data-filter="Community">Community</button></div></div></section>
-<section class="highlights"><div class="container"><div class="highlight-grid" id="highlight-grid"></div></div></section>
+
+<section class="page-hero" id="listing-hero">
+  <div class="container">
+    <span class="kicker">Highlights</span>
+    <h1>The moments behind the miles.</h1>
+    <p>Runs, rides, fundraisers, volunteering and the people and organizations helping turn movement into meaning.</p>
+  </div>
+</section>
+
+<section class="filters" id="filters-section">
+  <div class="container">
+    <div class="filter-row" id="filters">
+      <button class="filter active" data-filter="All">All</button>
+      <button class="filter" data-filter="Running">Running</button>
+      <button class="filter" data-filter="Cycling">Cycling</button>
+      <button class="filter" data-filter="Fundraiser">Fundraisers</button>
+      <button class="filter" data-filter="Community">Community</button>
+    </div>
+  </div>
+</section>
+
+<section class="highlights" id="listing-view">
+  <div class="container">
+    <div class="highlight-grid" id="highlight-grid"></div>
+  </div>
+</section>
+
+<section class="story-view" id="story-view">
+  <div class="container">
+    <div class="story-shell">
+      <a class="story-back" href="highlights.html">← Back to Highlights</a>
+      <div id="story-container"></div>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer><div class="container footer"><strong>MILES WITH MEANING</strong><div><a id="footer-facebook" target="_blank" rel="noopener">Facebook</a><a id="footer-instagram" target="_blank" rel="noopener">Instagram</a></div></div></footer>
+
+<footer>
+  <div class="container footer">
+    <strong>MILES WITH MEANING</strong>
+    <div>
+      <a id="footer-facebook" href="#" target="_blank">Facebook</a>
+      &nbsp; • &nbsp;
+      <a id="footer-instagram" href="#" target="_blank">Instagram</a>
+    </div>
+  </div>
+</footer>
+
 <script src="site-config.js"></script>
+
 <script>
 (function(){
- const c=window.MWM_CONFIG||{}; const grid=document.getElementById('highlight-grid');
- document.getElementById('footer-facebook').href=c.facebookUrl||'#'; document.getElementById('footer-instagram').href=c.instagramUrl||'#';
- function render(filter){grid.innerHTML=''; (c.highlights||[]).filter(x=>filter==='All'||x.category===filter).forEach(item=>{const card=document.createElement('article');card.className='highlight-card';card.id=item.slug||'';let media='<div class="highlight-icon">'+(item.icon||'✨')+'</div>';if(item.mediaType==='image'&&item.media)media='<img src="'+item.media+'" alt="">';else if(item.mediaType==='video'&&item.media)media='<video src="'+item.media+'" controls playsinline></video>';card.innerHTML='<div class="highlight-media">'+media+'</div><div class="highlight-body"><div class="highlight-meta">'+(item.category||'Highlight')+' • '+(item.date||'')+'</div><h2>'+item.title+'</h2><p>'+item.summary+'</p>'+(item.story?'<div class="story">'+item.story+'</div>':'')+'</div>';grid.appendChild(card);});}
- render('All'); document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render(btn.dataset.filter)}));
+
+  const c = window.MWM_CONFIG || {};
+  const grid = document.getElementById("highlight-grid");
+
+  document.getElementById("footer-facebook").href = c.facebookUrl || "#";
+  document.getElementById("footer-instagram").href = c.instagramUrl || "#";
+
+  function mediaMarkup(item){
+    if(item.mediaType === "image" && item.media){
+      return '<img src="' + item.media + '" alt="">';
+    }
+
+    if(item.mediaType === "video" && item.media){
+      return '<video src="' + item.media + '" muted playsinline controls></video>';
+    }
+
+    return '<div class="highlight-icon">' + (item.icon || "✨") + '</div>';
+  }
+
+  function renderCards(filter){
+    grid.innerHTML = "";
+
+    (c.highlights || [])
+      .filter(item => filter === "All" || item.category === filter)
+      .forEach(item => {
+
+        const card = document.createElement("article");
+        card.className = "highlight-card";
+
+        card.innerHTML =
+          '<div class="highlight-media">' + mediaMarkup(item) + '</div>' +
+          '<div class="highlight-body">' +
+            '<div class="highlight-meta">' +
+              (item.category || "Highlight") +
+              ' • ' +
+              (item.date || "") +
+            '</div>' +
+            '<h3>' + (item.title || "") + '</h3>' +
+            '<p>' + (item.summary || "") + '</p>' +
+            '<span class="highlight-link">Read the Story →</span>' +
+          '</div>';
+
+        card.addEventListener("click", function(){
+          window.location.hash = item.slug || "";
+        });
+
+        grid.appendChild(card);
+      });
+  }
+
+  function showStory(slug){
+
+    const item = (c.highlights || []).find(x => x.slug === slug);
+
+    if(!item){
+      showListing();
+      return;
+    }
+
+    document.getElementById("listing-hero").style.display = "none";
+    document.getElementById("filters-section").style.display = "none";
+    document.getElementById("listing-view").style.display = "none";
+    document.getElementById("story-view").style.display = "block";
+
+    let storyHtml = "";
+
+    if(Array.isArray(item.story)){
+      item.story.forEach(section => {
+        storyHtml +=
+          '<h2>' + (section.heading || "") + '</h2>' +
+          '<p>' + (section.text || "") + '</p>';
+      });
+    } else if(item.story){
+      storyHtml = item.story;
+    } else {
+      storyHtml =
+        '<p>' + (item.summary || "") + '</p>' +
+        '<p><em>More of this story is coming soon.</em></p>';
+    }
+
+    let galleryHtml = "";
+
+    if(Array.isArray(item.gallery) && item.gallery.length){
+      galleryHtml =
+        '<div class="story-gallery">' +
+        item.gallery.map(src =>
+          '<img src="' + src + '" alt="">'
+        ).join("") +
+        '</div>';
+    }
+
+    let donateHtml = "";
+
+    if(item.showDonate !== false){
+      donateHtml =
+        '<div class="story-cta">' +
+          '<h3>Help Make the Miles Matter</h3>' +
+          '<p>Support the organizations at the heart of the current Miles With Meaning campaign.</p>' +
+          '<a href="' + (c.apaDonateUrl || "#") + '" target="_blank">Support APA</a>' +
+          '<a href="' + (c.foxDonateUrl || "#") + '" target="_blank">Support Team Fox</a>' +
+        '</div>';
+    }
+
+    document.getElementById("story-container").innerHTML =
+      '<article class="story-hero">' +
+        '<div class="story-hero-media">' + mediaMarkup(item) + '</div>' +
+        '<div class="story-header">' +
+          '<div class="story-meta">' +
+            (item.category || "Highlight") +
+            ' • ' +
+            (item.date || "") +
+          '</div>' +
+          '<h1>' + (item.title || "") + '</h1>' +
+          '<div class="story-summary">' + (item.summary || "") + '</div>' +
+        '</div>' +
+      '</article>' +
+
+      '<article class="story-content">' +
+        storyHtml +
+        galleryHtml +
+        donateHtml +
+      '</article>';
+
+    window.scrollTo(0,0);
+  }
+
+  function showListing(){
+    document.getElementById("listing-hero").style.display = "block";
+    document.getElementById("filters-section").style.display = "block";
+    document.getElementById("listing-view").style.display = "block";
+    document.getElementById("story-view").style.display = "none";
+  }
+
+  document.querySelectorAll(".filter").forEach(btn => {
+    btn.addEventListener("click", function(){
+
+      document.querySelectorAll(".filter").forEach(x =>
+        x.classList.remove("active")
+      );
+
+      btn.classList.add("active");
+      renderCards(btn.dataset.filter);
+    });
+  });
+
+  function handleRoute(){
+    const slug = window.location.hash.replace("#","");
+
+    if(slug){
+      showStory(slug);
+    } else {
+      showListing();
+      renderCards("All");
+    }
+  }
+
+  window.addEventListener("hashchange", handleRoute);
+
+  handleRoute();
+
 })();
 </script>
-</body></html>
+
+</body>
+</html>
