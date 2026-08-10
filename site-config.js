@@ -17,6 +17,24 @@ window.MWM_CONFIG = {
       date: "August 2026",
       category: "Running",
       summary: "The final weeks of training for the Helsinki Marathon—and the campaign supporting APA of Missouri and Team Fox.",
+      story: [
+  {
+    heading: "Why Helsinki",
+    text: "The Helsinki Marathon became the centerpiece of this Miles With Meaning campaign because it gave me a meaningful goal to train toward while raising support for two organizations that matter deeply to me: APA of Missouri and the Michael J. Fox Foundation through Team Fox."
+  },
+  {
+    heading: "The Training",
+    text: "Training for a marathon means months of early mornings, long runs, hard workouts, cycling, recovery days, heat, fatigue and the occasional setback. The final weeks are where everything starts to come together, and every mile is a reminder that the effort is about more than race day."
+  },
+  {
+    heading: "The Meaning",
+    text: "Miles With Meaning is built around a simple idea: movement can create impact. This campaign uses the miles leading up to Helsinki to help support animals in need through APA of Missouri and Parkinson's research through the Michael J. Fox Foundation."
+  },
+  {
+    heading: "Race Week",
+    text: "The goal now is to arrive in Helsinki healthy, prepared and ready to run 26.2 miles with purpose. I will keep sharing updates, photos and the story behind the race as the campaign continues."
+  }
+],
       mediaType: "image",
       media: "assets/ken-running.jpg",
       icon: "🏃"
