@@ -136,7 +136,49 @@ footer{background:#021529;color:#fff;padding:30px 0}
   .progress-head{flex-direction:column;align-items:flex-start;gap:4px}
   section{padding:66px 0}
   .badge{width:98px;height:98px;right:-6px;top:28px;border-width:5px}
+}/* Stay Connected popup */
+.signup-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 33, 63, 0.75);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
+
+.signup-modal.open {
+  display: flex;
+}
+
+.signup-modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 850px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0,0,0,.30);
+}
+
+.signup-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 10;
+  border: 0;
+  background: #ffffff;
+  color: #05213f;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+  
 </style>
 </head>
 <body>
@@ -348,9 +390,17 @@ footer{background:#021529;color:#fff;padding:30px 0}
       <h2>Every mile matters.</h2>
       <p>Thank you for helping turn movement into meaningful impact.</p>
       <div class="motto">Move • Give • Share</div>
+      <div style="margin-top:28px;">
+  <button id="open-signup" class="btn btn-orange" type="button">Stay Connected</button>
+</div>
     </div>
   </section>
+<div id="signup-modal" class="signup-modal">
+  <div class="signup-modal-content">
+    <button id="close-signup" class="signup-modal-close" type="button" aria-label="Close">&times;</button>
 <script async data-uid="f2734f7fb1" src="https://miles-with-meaning.kit.com/f2734f7fb1/index.js"></script>
+  </div>
+</div>
   
 </main>
 
@@ -420,6 +470,37 @@ footer{background:#021529;color:#fff;padding:30px 0}
   partnerGrid.appendChild(card);
 }); 
 })();
+</script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('signup-modal');
+  const openButton = document.getElementById('open-signup');
+  const closeButton = document.getElementById('close-signup');
+
+  openButton.addEventListener('click', function () {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeButton.addEventListener('click', function () {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+});
 </script>
 </body>
 </html>
