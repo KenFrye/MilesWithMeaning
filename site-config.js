@@ -65,7 +65,7 @@ partners: [
     name: "APA of Missouri",
     type: "Current beneficiary",
     url: "https://apamo.org",
-    logo: "assets/IMG_9760.JPG"
+   logo: "assets/APA-logo-cropped.jpg"
   },
   {
     name: "Michael J. Fox Foundation",
