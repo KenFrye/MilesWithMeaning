@@ -64,32 +64,39 @@ partners: [
   {
     name: "APA of Missouri",
     type: "Current beneficiary",
-    url: "https://apamo.org"
+    url: "https://apamo.org",
+    logo: "assets/IMG_9760.JPG"
   },
   {
     name: "Michael J. Fox Foundation",
     type: "Current beneficiary • Team Fox",
-    url: "https://www.michaeljfox.org"
+    url: "https://www.michaeljfox.org",
+    logo: "assets/MJFF_Team_Fox_Logo_Horizontal_Orange_RGB.png"
   },
   {
     name: "Big Shark Bicycle Co.",
     type: "Community partner",
-    url: "https://www.bigshark.com"
+    url: "https://www.bigshark.com",
+    logo: "assets/bigshark_STLPNG.png"
   },
- {
-      name: "Running Niche",
-      type: "Community partner",
-      url: "https://runningniche.com"
-    },
-    {
-      name: "United Way of Greater St. Louis",
-      type: "Past beneficiary",
-      url: "https://helpingpeople.org"
-    },
   {
-  name: "Power Up Cycling",
-  type: "Community partner",
-  url: "https://www.powerupcycling.com/"
-},
+    name: "Running Niche",
+    type: "Community partner",
+    url: "https://runningniche.com",
+    logo: "assets/running-niche-logo.webp"
+  },
+  {
+    name: "United Way of Greater St. Louis",
+    type: "Past beneficiary",
+    url: "https://helpingpeople.org",
+    logo: "assets/UWGSL_logo_horz_tri-color_RGB.jpg"
+  },
+  {
+    name: "Power Up Cycling",
+    type: "Community partner",
+    url: "https://www.powerupcycling.com/",
+    logo: "assets/PowerUP_BigSharkWEB.png"
+  }
 ]
-};
+
+
