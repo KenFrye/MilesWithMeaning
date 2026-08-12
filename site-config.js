@@ -91,12 +91,11 @@ partners: [
     url: "https://helpingpeople.org",
     logo: "assets/UWGSL_logo_horz_tri-color_RGB.jpg"
   },
-  {
+   {
     name: "Power Up Cycling",
     type: "Community partner",
     url: "https://www.powerupcycling.com/",
     logo: "assets/PowerUP_BigSharkWEB.png"
   }
 ]
-
-
+};
