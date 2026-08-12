@@ -85,6 +85,11 @@ partners: [
       name: "United Way of Greater St. Louis",
       type: "Past beneficiary",
       url: "https://helpingpeople.org"
-    }
+    },
+  {
+  name: "Power Up Cycling",
+  type: "Community partner",
+  url: "https://www.powerupcycling.com/"
+},
 ]
 };
