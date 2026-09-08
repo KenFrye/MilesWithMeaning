@@ -1,6 +1,6 @@
 window.MWM_CONFIG = {
-  lifetimeRaisedText: "$13,000+",
-  currentRaised: 850,
+  lifetimeRaisedText: "$19000+",
+  currentRaised: 5350,
   currentGoal: 5000,
   currentCampaign: "2026 Helsinki Marathon",
   campaignDate: "August 22, 2026",
