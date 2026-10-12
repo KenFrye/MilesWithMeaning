@@ -1,16 +1,10 @@
 window.MWM_CONFIG = {
   lifetimeRaisedText: "$19000+",
-  currentRaised: 5350,
+  currentRaised: 5850,
   currentGoal: 5000,
   currentCampaign: "2026 Helsinki Marathon - Goal Surpassed!",
   campaignDate: "Extended through September 30 Please donate to the Michael J Fox Foundation",
-{
-  slug: "brunch-with-meaning",
-  title: "Brunch With Meaning at SqWires",
-  date: "Sunday, November 15, 2026",
-  category: "Fundraiser",
-  summary: "Join us for brunch at SqWires in Lafayette Square. Puppies will be at the event, and 15% of event proceeds will benefit the APA of Missouri, supporting dogs, cats, and other pets."
-}
+
   facebookUrl: "https://www.facebook.com/share/19LEXd9e7G/?mibextid=wwXIfr",
   instagramUrl: "https://www.instagram.com/mileswithmeaning_stl?igsh=OWR5aXpzbjhqZ3R1&utm_source=qr",
   apaDonateUrl: "https://apamo.givecloud.co/fundraising/forms/GND572D8",
@@ -45,15 +39,15 @@ window.MWM_CONFIG = {
       icon: "🏃"
     },
     {
-      slug: "brunch-with-meaning",
-      title: "Brunch With Meaning",
-      date: "Coming Soon",
-      category: "Fundraiser",
-      summary: "A local restaurant fundraiser that turns a meal with friends into support for a meaningful cause.",
-      mediaType: "icon",
-      media: "",
-      icon: "🍽️"
-    },
+  slug: "brunch-with-meaning",
+  title: "Brunch With Meaning at SqWires",
+  date: "Sunday, November 15, 2026",
+  category: "Fundraiser",
+  summary: "Join us for brunch at SqWires in Lafayette Square. Puppies will be at the event, and 15% of event proceeds will benefit the APA of Missouri, supporting dogs, cats, and other pets.",
+  mediaType: "image",
+  media: "assets/sqwires_brunch_interior.jpg",
+  icon: "🍽️"
+},
     {
       slug: "community-impact",
       title: "Miles With Meaning in the Community",
